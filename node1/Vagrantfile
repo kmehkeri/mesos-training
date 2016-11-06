@@ -15,4 +15,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "03_mesos_marathon.sh"
   config.vm.provision "shell", path: "04_zookeeper.sh"
   config.vm.provision "shell", path: "05_mesos_dns.sh"
+  config.vm.provision "shell", path: "06_apps.sh"
 end

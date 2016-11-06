@@ -1,0 +1,15 @@
+{
+  "id": "dns",
+  "cmd": "/root/go/src/github.com/mesosphere/mesos-dns/mesos-dns -v=1 -config=/root/go/src/github.com/mesosphere/mesos-dns/config.json",
+  "cpus": 0.2,
+  "mem": 32,
+  "disk": 0,
+  "instances": 1,
+  "constraints": [
+    [
+      "hostname",
+      "CLUSTER",
+      "node1"
+    ]
+  ]
+}
