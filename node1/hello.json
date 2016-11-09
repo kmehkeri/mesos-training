@@ -1,0 +1,10 @@
+{
+  "name": "Hello Chronos",
+  "schedule": "R/2016-01-01T00:00:00Z/PT30S",
+  "command": "echo [$(date)] Hello World from Chronos! >>/tmp/chronos_hello.log",
+  "epsilon": "PT15S",
+  "owner": "noone@example.com",
+  "async": false,
+  "cpus": 0.1,
+  "mem": 32
+}
