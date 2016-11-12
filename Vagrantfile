@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
     node1.vm.provision "shell", path: "05_mesos_dns.sh"
     node1.vm.provision "shell", path: "06_apps.sh"
     node1.vm.provision "shell", path: "07_chronos.sh"
+    node1.vm.provision "shell", path: "08_docker.sh"
   end
 
   config.vm.define "node2" do |node2| 
@@ -25,6 +26,7 @@ Vagrant.configure(2) do |config|
     node2.vm.hostname = "node2"
 
     node2.vm.provision "shell", path: "03_slave_mesos.sh"
+    node2.vm.provision "shell", path: "08_slave_docker.sh"
   end
 
 end
