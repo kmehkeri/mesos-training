@@ -24,11 +24,17 @@ echo "* Post-configuration"
 echo 'docker,mesos' >/etc/mesos-slave/containerizers
 
 echo "* Start services"
-service docker start
+systemctl enable docker
+systemctl start docker
 sudo -u zookeeper zookeeper-server-initialize --myid=1
-service zookeeper-server start
-service mesos-master start
-service mesos-slave start
-service marathon start
-service chronos start
+systemctl enable zookeeper-server
+systemctl start zookeeper-server
+systemctl enable mesos-master
+systemctl start mesos-master
+systemctl enable mesos-slave
+systemctl start mesos-slave
+systemctl enable marathon
+systemctl start marathon
+systemctl enable chronos
+systemctl start chronos
 

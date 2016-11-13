@@ -12,6 +12,8 @@ echo 'docker,mesos' >/etc/mesos-slave/containerizers
 echo 'zk://192.168.33.10:2181/mesos' >/etc/mesos/zk
 
 echo "* Start services"
-service docker start
-service mesos-slave start
+systemctl enable docker
+systemctl start docker
+systemctl enable mesos-slave
+systemctl start mesos-slave
 
